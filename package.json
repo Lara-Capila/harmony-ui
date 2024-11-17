@@ -1,25 +1,32 @@
 {
-  "name": "harmony-ui",
+  "name": "harmony-ds",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "A simple React component library",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "exports": {
-    "./*": {
+    ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/components/index.d.ts"
     },
-    "./styles": "./dist/index.css"
+    "./dist/style.css": "./dist/style.css"
   },
   "files": [
-    "/dist"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "typesVersions": {
+    "*": {
+      "./components": [
+        "dist/components/index.d.ts"
+      ]
+    }
   },
   "scripts": {
     "dev": "vite",
